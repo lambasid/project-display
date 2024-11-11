@@ -9,7 +9,11 @@ function ProjectDetail({ projects }) {
   const project = projects.find((proj) => proj.id === parseInt(id));
 
   if (!project) {
-    return <Typography variant="h5" sx={{ textAlign: "center", marginTop: "20px" }}>Project Not Found</Typography>;
+    return (
+      <Typography variant="h5" sx={{ textAlign: "center", marginTop: "20px" }}>
+        Project Not Found
+      </Typography>
+    );
   }
 
   return (
@@ -28,7 +32,7 @@ function ProjectDetail({ projects }) {
       </Typography>
 
       {/* Conditional Descriptions and Links */}
-      {project.title === "WaterCooler" ? (
+      {project.title === "WaterCooler App" ? (
         <>
           <Typography variant="body1" padding="20px" paragraph>
             <strong>WaterCooler</strong> is a mobile app designed for residents in apartment buildings and other shared residences. It provides seamless, phone-based access to rooms, allowing residents to enter easily without physical keys. Beyond access, WaterCooler fosters a sense of community by enabling residents to connect and make friends within their building.
@@ -47,9 +51,6 @@ function ProjectDetail({ projects }) {
           <Typography variant="body1" padding="20px" paragraph>
             <strong>MealHub</strong> is a hackathon web app that creates personalized meal plans tailored to users' dietary preferences, favorite cuisines, and available cooking days. Users simply input their restrictions and schedules, and MealHub generates a complete weekly meal plan along with a shopping list to ensure accurate ingredient quantities.
           </Typography>
-          <Typography variant="body1" padding="20px" paragraph>
-            MealHub provides the flexibility to accept its suggestions as-is or customize them by swapping meals, adding new ones, or generating a completely randomized plan. Users can also save their favorite recipes for future reference, ensuring they always have access to meals they loved.
-          </Typography>
           <Link
             href="https://devpost.com/software/mealhub"
             target="_blank"
@@ -59,7 +60,7 @@ function ProjectDetail({ projects }) {
             View MealHub on Devpost
           </Link>
         </>
-      ) : project.title === "Eat Real" ? (
+      ) : project.title === "Eat Real App" ? (
         <>
           <Typography variant="body1" padding="20px" paragraph>
             <strong>Eat Real</strong> is a non-profit organization dedicated to promoting sustainable food practices and healthy eating. They work with schools, companies, and communities to make healthy, affordable food more accessible and to educate people on sustainable food choices.
@@ -73,39 +74,45 @@ function ProjectDetail({ projects }) {
             Learn More About Eat Real
           </Link>
         </>
-      ) : null}
+      ) : project.title === "Daily Wellness App" ? (
+        <>
+          <Typography variant="body1" padding="20px" paragraph>
+            <strong>Daily Wellness</strong> is a mobile app designed to help users track their daily health and wellness activities. Users can log their meals, workouts, water intake, and sleep patterns, as well as set reminders for daily tasks like taking medications or going for a walk.
+          </Typography>
 
-      {/* Video Thumbnail Example (optional, only if applicable) */}
-      <Link
-        href="https://youtu.be/guKOV3laBH8?si=7vYV7hqPUNxqHZVc" // Example link; replace if needed
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ position: "relative", display: "inline-block", marginTop: "20px", textDecoration: "none" }}
-      >
-        <CardMedia
-          component="img"
-          image="https://img.youtube.com/vi/guKOV3laBH8/hqdefault.jpg" // Replace with actual thumbnail if needed
-          alt={`Watch ${project.title} Demo`}
-          sx={{
-            width: "100%",
-            maxWidth: "800px",
-            borderRadius: 2,
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
-            cursor: "pointer"
-          }}
-        />
-        <PlayCircleOutlineIcon
-          sx={{
-            fontSize: "60px",
-            color: "white",
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            opacity: 0.8
-          }}
-        />
-      </Link>
+          {/* Video Thumbnail for Daily Wellness App */}
+          <Link
+            href="https://youtu.be/guKOV3laBH8?si=7vYV7hqPUNxqHZVc"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{ position: "center", display: "inline-block", marginTop: "20px", textDecoration: "none" }}
+          >
+            <CardMedia
+              component="img"
+              image="https://img.youtube.com/vi/guKOV3laBH8/hqdefault.jpg"
+              alt={`Watch ${project.title} Demo`}
+              sx={{
+                width: "100%",
+                maxWidth: "800px",
+                borderRadius: 2,
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+                cursor: "pointer"
+              }}
+            />
+            <PlayCircleOutlineIcon
+              sx={{
+                fontSize: "60px",
+                color: "white",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                opacity: 0.8
+              }}
+            />
+          </Link>
+        </>
+      ) : null}
     </Box>
   );
 }
