@@ -27,7 +27,7 @@ body {
 .portfolio-container {
   max-width: 1200px;
   margin: auto;
-  padding-top: 10%;
+  padding-top: 95px;
   padding: auto;
   display: flex;
   gap: 20px;
