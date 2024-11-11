@@ -24,18 +24,10 @@ body {
   text-decoration: dotted;
 }
 
-/* .header-title {
-  
-  font-Weight: "bold";
-  color: "#a31a1e";
-  letter-spacing: "1.5px";
-  margin-Bottom: "1px"
-} */
-
 .portfolio-container {
   max-width: 1200px;
   margin: auto;
-  padding-top: 5%;
+  padding-top: 10%;
   padding: auto;
   display: flex;
   gap: 20px;
