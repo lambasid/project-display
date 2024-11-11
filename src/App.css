@@ -16,19 +16,18 @@ body {
   background-color: #f5e9e2;
   /* Dark Blue */
   color: #a31a1e;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
   font-weight: bold;
   letter-spacing: 1.5px;
-  margin-Bottom: "1px";
-  text-decoration: dotted;
+  z-index: 1000;
+  margin-bottom: auto;
 }
 
 .portfolio-container {
   max-width: 1200px;
   margin: auto;
   padding-top: 120px;
-  padding: auto;
   display: flex;
   gap: 20px;
   justify-content: center;
