@@ -1,18 +1,79 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5e9e2;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  background-color: #f5e9e2;
+  /* Dark Blue */
+  color: #a31a1e;
   padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-Bottom: "1px";
+  text-decoration: dotted;
+}
+
+/* .header-title {
+  
+  font-Weight: "bold";
+  color: "#a31a1e";
+  letter-spacing: "1.5px";
+  margin-Bottom: "1px"
+} */
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 5%;
+  padding: auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer {
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f5e9e2;
+  /* Dark Blue */
+  color: #a31a1e;
+  padding: 20px;
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 .MuiCard-root {
-  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.MuiCardMedia-root {
-  object-fit: cover;
+.MuiCard-root:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  background-color: #ffffff;
+}
+
+.MuiTypography-h6 {
+  color: #c82328;
 }
